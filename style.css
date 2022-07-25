@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(116, 75, 1);
+}
+
+/* navbar */
+.top {
+  background-color: rgb(70, 46, 1);
+  height: 5rem;
+  padding: 1rem 0;
+  max-width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.top h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  letter-spacing: 2px;
+  width: 500px;
+  position: absolute;
+  left: 100px;
+}
+/* all the bot text */
+.text {
+  padding: 4rem 10rem;
+  color: white;
+  line-height: 30px;
+  font-size: 20px;
+}
+/* ANIMATIONS */
+.hero-text {
+  animation: slideFromTop 3s ease-in-out 1;
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* for the button */
+@keyframes slideFromBot {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* end of animations , i added in the button class*/
+
+/* only the catsofa text */
+.text h2 {
+  letter-spacing: 2px;
+}
+
+.button {
+  font-size: 15px;
+  padding: 10px 10px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border-color: white;
+  /* animation */
+  animation: slideFromBot 3s ease-in-out 1;
+}
+.button:hover {
+  cursor: pointer;
+}
+/* .bot {
+  background: linear-gradient(rgba(25, 34, 19, 0.5), rgba(146, 91, 74, 0.5)),
+    url(./pexels-photo-11374454.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 0;
+  max-width: 1170px;
+  min-width: 1000px;
+  height: calc(100vh - 5rem);
+  min height: 780px;
+
+  margin: 0 auto;
+} */
+
+.bot {
+  background: linear-gradient(rgba(25, 34, 19, 0.5), rgba(146, 91, 74, 0.5));
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1125px;
+  height: 750px;
+  margin: 0 auto;
+}
+
+/* the gradient under the cat pic */
+.temp {
+  margin-top: 460px;
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(25, 34, 19, 0.5),
+    rgba(146, 91, 74, 0.5),
+    rgba(233, 118, 41, 0.5)
+  );
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .bot {
+    background: linear-gradient(rgba(25, 34, 19, 0.5), rgba(146, 91, 74, 0.5)),
+      url(./pexels-photo-11374454.jpeg);
+  }
+}
